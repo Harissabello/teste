@@ -13,6 +13,7 @@ class PagesController extends Controller
 
     public function propos() {
         return view('pages.apropos');
+        
     }
 
     public function service() {
