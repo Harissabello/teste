@@ -5,10 +5,14 @@
 @endsection
 
 @section('contenu')
-<h2>Bienvenu sur services</h2>
-<div class="mt-4 p-5 bg-primary text-white rounded">
-  <h1>Jumbotron Example</h1> 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p> 
-</div>
+  <h2>Bienvenu sur services</h2>
+  
+  @foreach ($produits as $produit)
+    <div class="mb-3 p-2 bg-secondary">
+      <h4><a class="text-white " href="">{{$produit->product_name}}</a></h4>
+    </div>
+  @endforeach
+  {{-- pour une pagination --}}
+  {{$produits->links()}}
 @endsection
 
