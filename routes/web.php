@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,9 @@ Route::get('/', [PagesController::class, 'home']);
 Route::get('/apropos', [PagesController::class, 'propos']);
 
 Route::get('/services', [PagesController::class, 'service']);
+
+Route::get('/show/{id}', [PagesController::class, 'show']);
+
+Route::get('/create', [ProductController::class, 'create']);
+
+Route:: post('/saveProduct', [ProductController::class, 'saveProduct']);
