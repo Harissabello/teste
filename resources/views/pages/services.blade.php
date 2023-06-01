@@ -6,7 +6,7 @@
 
 @section('contenu')
   <h2>Bienvenu sur services</h2>
-  @if (Session::has('status'))
+  @if (Session::has('status')) 
     <div class="alert alert-success">
       {{Session::get('status')}}
     </div>
